@@ -14,10 +14,12 @@
         <module>rumi-platform-service</module>
         <module>rumi-platform-gateway</module>
         <module>rumi-platform-common</module>
+        <module>rumi-platform-base</module>
     </modules>
 
     <properties>
         <lombok.version>1.18.12</lombok.version>
+        <guava.version>27.0-jre</guava.version>
     </properties>
 
     <dependencies>
@@ -30,6 +32,12 @@
     </dependencies>
 
     <dependencyManagement>
-
+        <dependencies>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 </project>
