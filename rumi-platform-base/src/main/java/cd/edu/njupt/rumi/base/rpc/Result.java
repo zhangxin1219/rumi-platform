@@ -1,19 +1,26 @@
-package cn.edu.njupt.rumi.common.rpc;
+package cd.edu.njupt.rumi.base.rpc;
 
 import lombok.Data;
 
 import java.util.Date;
 
 /**
+ * RPC返回结果
+ *
  * @author ZhangXin
  * @date 2020/9/18 15:33
  */
 @Data
 public class Result<T> {
     /**
+     * traceId
+     */
+    private String traceId;
+
+    /**
      * 时间
      */
-    private Date date;
+    private Date time;
 
     /**
      * 是否成功
@@ -45,7 +52,7 @@ public class Result<T> {
     public static <T> Result<T> success(T data) {
         Result<T> result = new Result<T>();
         result.setSuccess(true);
-        result.setDate(new Date());
+        result.setTime(new Date());
         result.setErrorCode(null);
         result.setErrorMsg(null);
         result.setData(data);
@@ -63,7 +70,7 @@ public class Result<T> {
     public static <T> Result<T> error(String errorCode, String errorMsg) {
         Result<T> result = new Result<T>();
         result.setSuccess(false);
-        result.setDate(new Date());
+        result.setTime(new Date());
         result.setErrorCode(errorCode);
         result.setErrorMsg(errorMsg);
         return result;

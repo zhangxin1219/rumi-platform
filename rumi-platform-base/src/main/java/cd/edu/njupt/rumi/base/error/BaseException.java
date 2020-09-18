@@ -1,4 +1,4 @@
-package cn.edu.njupt.rumi.common.error;
+package cd.edu.njupt.rumi.base.error;
 
 /**
  * 异常基类
@@ -17,11 +17,13 @@ public class BaseException extends Exception {
      */
     private String errorMsg;
 
-
-
     public BaseException(String errorCode, String errorMsg) {
+        super();
         this.errorCode = errorCode;
         this.errorMsg = errorMsg;
     }
 
+    public BaseException(ErrorCode errorCode) {
+
+    }
 }
