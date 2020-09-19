@@ -7,7 +7,7 @@
     <groupId>cn.edu.njupt</groupId>
     <artifactId>rumi-platform</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>rumi-platform-dao</module>
         <module>rumi-platform-client</module>
@@ -15,12 +15,21 @@
         <module>rumi-platform-gateway</module>
         <module>rumi-platform-common</module>
         <module>rumi-platform-base</module>
+        <module>rumi-platform-start</module>
     </modules>
 
     <properties>
         <lombok.version>1.18.12</lombok.version>
         <guava.version>27.0-jre</guava.version>
+        <springboot.version>2.2.10.RELEASE</springboot.version>
+        <rumi.platform.version>0.0.1-SNAPSHOT</rumi.platform.version>
     </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.10.RELEASE</version>
+    </parent>
 
     <dependencies>
         <dependency>
@@ -33,11 +42,58 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- 1.spring依赖 -->
+
+            <!-- 2.三方依赖 -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
+
+            <!-- 3.内部依赖 -->
+            <dependency>
+                <groupId>cn.edu.njupt</groupId>
+                <artifactId>rumi-platform-dao</artifactId>
+                <version>${rumi.platform.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.edu.njupt</groupId>
+                <artifactId>rumi-platform-base</artifactId>
+                <version>${rumi.platform.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.edu.njupt</groupId>
+                <artifactId>rumi-platform-client</artifactId>
+                <version>${rumi.platform.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.edu.njupt</groupId>
+                <artifactId>rumi-platform-common</artifactId>
+                <version>${rumi.platform.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.edu.njupt</groupId>
+                <artifactId>rumi-platform-gateway</artifactId>
+                <version>${rumi.platform.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.edu.njupt</groupId>
+                <artifactId>rumi-platform-service</artifactId>
+                <version>${rumi.platform.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.edu.njupt</groupId>
+                <artifactId>rumi-platform-start</artifactId>
+                <version>${rumi.platform.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>
