@@ -70,6 +70,11 @@
     <dependencyManagement>
         <dependencies>
             <!-- 1.spring依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
 
             <!-- 2.三方依赖 -->
 
