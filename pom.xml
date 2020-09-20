@@ -21,6 +21,7 @@
     <properties>
         <lombok.version>1.18.12</lombok.version>
         <guava.version>27.0-jre</guava.version>
+        <apache.collections4.version>4.4</apache.collections4.version>
         <springboot.version>2.2.10.RELEASE</springboot.version>
         <rumi.platform.version>0.0.1-SNAPSHOT</rumi.platform.version>
     </properties>
@@ -32,11 +33,37 @@
     </parent>
 
     <dependencies>
+        <!-- 1.spring依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+
+        <!-- 2.三方依赖-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${apache.collections4.version}</version>
         </dependency>
     </dependencies>
 
@@ -45,11 +72,7 @@
             <!-- 1.spring依赖 -->
 
             <!-- 2.三方依赖 -->
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
+
 
             <!-- 3.内部依赖 -->
             <dependency>

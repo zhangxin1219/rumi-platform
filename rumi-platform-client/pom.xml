@@ -11,5 +11,12 @@
 
     <artifactId>rumi-platform-client</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.edu.njupt</groupId>
+            <artifactId>rumi-platform-base</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>

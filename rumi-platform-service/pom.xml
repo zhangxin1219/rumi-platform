@@ -11,5 +11,16 @@
 
     <artifactId>rumi-platform-service</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.edu.njupt</groupId>
+            <artifactId>rumi-platform-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.edu.njupt</groupId>
+            <artifactId>rumi-platform-dao</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
