@@ -1,7 +1,7 @@
-package cd.edu.njupt.rumi.base.error;
+package cn.edu.njupt.rumi.base.error;
 
-import cd.edu.njupt.rumi.base.dto.PairValueDTO;
-import cd.edu.njupt.rumi.base.enums.BaseEnum;
+import cn.edu.njupt.rumi.base.dto.PairValueDTO;
+import cn.edu.njupt.rumi.base.enums.BaseEnum;
 import com.google.common.collect.Lists;
 
 import java.util.List;

@@ -1,4 +1,6 @@
-package cd.edu.njupt.rumi.base.error;
+package cn.edu.njupt.rumi.base.error;
+
+import lombok.Data;
 
 /**
  * 异常基类
@@ -6,7 +8,8 @@ package cd.edu.njupt.rumi.base.error;
  * @author ZhangXin
  * @date 2020/9/18 15:12
  */
-public class BaseException extends Exception {
+@Data
+public class BaseException extends RuntimeException {
     /**
      * 错误码
      */

@@ -1,5 +1,6 @@
-package cd.edu.njupt.rumi.base.rpc;
+package cn.edu.njupt.rumi.base.rpc;
 
+import cn.edu.njupt.rumi.base.error.ErrorCode;
 import lombok.Data;
 
 import java.util.Date;
@@ -73,6 +74,22 @@ public class Result<T> {
         result.setTime(new Date());
         result.setErrorCode(errorCode);
         result.setErrorMsg(errorMsg);
+        return result;
+    }
+
+    /**
+     * 失败
+     *
+     * @param errorCode 错误码
+     * @param <T>       类型
+     * @return 错误result
+     */
+    public static <T> Result<T> error(ErrorCode errorCode) {
+        Result<T> result = new Result<T>();
+        result.setSuccess(false);
+        result.setTime(new Date());
+        result.setErrorCode(errorCode.getLabel());
+        result.setErrorMsg(errorCode.getValue());
         return result;
     }
 }

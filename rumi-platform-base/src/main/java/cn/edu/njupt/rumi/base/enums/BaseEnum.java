@@ -1,6 +1,6 @@
-package cd.edu.njupt.rumi.base.enums;
+package cn.edu.njupt.rumi.base.enums;
 
-import cd.edu.njupt.rumi.base.dto.PairValueDTO;
+import cn.edu.njupt.rumi.base.dto.PairValueDTO;
 
 import java.util.List;
 
@@ -28,6 +28,7 @@ public interface BaseEnum {
 
     /**
      * 返回所有枚举项
+     *
      * @return 枚举项键值对
      */
     List<PairValueDTO> toList();

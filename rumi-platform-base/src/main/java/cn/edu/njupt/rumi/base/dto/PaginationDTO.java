@@ -1,4 +1,4 @@
-package cd.edu.njupt.rumi.base.dto;
+package cn.edu.njupt.rumi.base.dto;
 
 import lombok.Data;
 
