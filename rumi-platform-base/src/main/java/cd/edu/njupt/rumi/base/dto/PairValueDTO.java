@@ -20,4 +20,9 @@ public class PairValueDTO {
      * value
      */
     private String value;
+
+    public PairValueDTO(String label, String value) {
+        this.label = label;
+        this.value = value;
+    }
 }

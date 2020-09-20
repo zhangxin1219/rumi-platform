@@ -10,12 +10,12 @@ public class BaseException extends Exception {
     /**
      * 错误码
      */
-    private String errorCode;
+    private final String errorCode;
 
     /**
      * 错误消息
      */
-    private String errorMsg;
+    private final String errorMsg;
 
     public BaseException(String errorCode, String errorMsg) {
         super();
@@ -24,6 +24,8 @@ public class BaseException extends Exception {
     }
 
     public BaseException(ErrorCode errorCode) {
-
+        super();
+        this.errorCode = errorCode.getLabel();
+        this.errorMsg = errorCode.getValue();
     }
 }
