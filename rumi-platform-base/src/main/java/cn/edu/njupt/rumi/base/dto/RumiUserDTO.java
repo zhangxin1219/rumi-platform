@@ -9,7 +9,7 @@ import lombok.Data;
  * @date 2020/9/19 10:48
  */
 @Data
-public class OptUserDTO {
+public class RumiUserDTO {
 
     /**
      * id

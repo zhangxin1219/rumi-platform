@@ -1,4 +1,4 @@
-package cn.edu.njupt.rumi.common.cache;
+package cn.edu.njupt.rumi.base.cache;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package cn.edu.njupt.rumi.base.error;
+package cn.edu.njupt.rumi.base.rpc;
 
 /**
  * 异常捕捉

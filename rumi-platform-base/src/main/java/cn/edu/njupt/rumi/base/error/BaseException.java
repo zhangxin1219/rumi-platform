@@ -1,6 +1,7 @@
 package cn.edu.njupt.rumi.base.error;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * 异常基类
@@ -8,6 +9,7 @@ import lombok.Data;
  * @author ZhangXin
  * @date 2020/9/18 15:12
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class BaseException extends RuntimeException {
     /**

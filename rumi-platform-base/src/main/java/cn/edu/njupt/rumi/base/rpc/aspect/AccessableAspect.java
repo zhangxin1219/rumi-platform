@@ -1,5 +1,7 @@
-package cn.edu.njupt.rumi.base.error;
+package cn.edu.njupt.rumi.base.rpc.aspect;
 
+import cn.edu.njupt.rumi.base.error.BaseException;
+import cn.edu.njupt.rumi.base.error.ErrorCode;
 import cn.edu.njupt.rumi.base.rpc.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -19,7 +21,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class AccessableAspect {
 
-    @Pointcut("@within(cn.edu.njupt.rumi.base.error.Accessable)")
+    @Pointcut("@within(cn.edu.njupt.rumi.base.rpc.Accessable)")
     private void pointcut() {
     }
 
