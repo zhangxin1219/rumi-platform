@@ -1,6 +1,6 @@
 package cn.edu.njupt.rumi.client.service;
 
-import cn.edu.njupt.rumi.base.dto.OptUserDTO;
+import cn.edu.njupt.rumi.base.dto.RumiUserDTO;
 import cn.edu.njupt.rumi.base.rpc.Result;
 
 /**
@@ -12,16 +12,16 @@ public interface RumiTestService {
     /**
      * 测试
      *
-     * @param optUser 操作者
+     * @param rumiUser 操作者
      * @return void
      */
-    Result<Void> testBaseException(OptUserDTO optUser);
+    Result<Void> testBaseException(RumiUserDTO rumiUser);
 
     /**
      * 测试空指针异常
      *
-     * @param optUser 操作者
+     * @param rumiUser 操作者
      * @return boolean
      */
-    Result<Boolean> testNullPointerException(OptUserDTO optUser);
+    Result<Boolean> testNullPointerException(RumiUserDTO rumiUser);
 }

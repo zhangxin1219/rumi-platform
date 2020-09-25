@@ -1,7 +1,7 @@
 package cn.edu.njupt.rumi.service.impl;
 
-import cn.edu.njupt.rumi.base.dto.OptUserDTO;
-import cn.edu.njupt.rumi.base.error.Accessable;
+import cn.edu.njupt.rumi.base.dto.RumiUserDTO;
+import cn.edu.njupt.rumi.base.rpc.Accessable;
 import cn.edu.njupt.rumi.base.rpc.Result;
 import cn.edu.njupt.rumi.client.service.RumiTestService;
 import cn.edu.njupt.rumi.service.biz.RumiTestBizService;
@@ -22,16 +22,16 @@ public class RumiTestServiceImpl implements RumiTestService {
     private RumiTestBizService rumiTestBizService;
 
     @Override
-    public Result<Void> testBaseException(OptUserDTO optUser) {
-        log.info("RumiTestServiceImpl.testRumiServiceException@@@{}", optUser);
-        rumiTestBizService.testRumiServiceException(optUser);
+    public Result<Void> testBaseException(RumiUserDTO rumiUser) {
+        log.info("RumiTestServiceImpl.testRumiServiceException@@@{}", rumiUser);
+        rumiTestBizService.testRumiServiceException(rumiUser);
         return Result.success(null);
     }
 
     @Override
-    public Result<Boolean> testNullPointerException(OptUserDTO optUser) {
-        log.info("RumiTestServiceImpl.testNullPointerException@@@{}", optUser);
-        rumiTestBizService.testNullPointerException(optUser);
+    public Result<Boolean> testNullPointerException(RumiUserDTO rumiUser) {
+        log.info("RumiTestServiceImpl.testNullPointerException@@@{}", rumiUser);
+        rumiTestBizService.testNullPointerException(rumiUser);
         return Result.success(true);
     }
 }

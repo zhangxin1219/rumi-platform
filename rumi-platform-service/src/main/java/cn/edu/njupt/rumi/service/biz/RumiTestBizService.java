@@ -1,6 +1,6 @@
 package cn.edu.njupt.rumi.service.biz;
 
-import cn.edu.njupt.rumi.base.dto.OptUserDTO;
+import cn.edu.njupt.rumi.base.dto.RumiUserDTO;
 import cn.edu.njupt.rumi.service.RumiServiceException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -12,13 +12,13 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class RumiTestBizService {
-    public void testRumiServiceException(OptUserDTO optUser) {
-        log.info("RumiTestBizService.testRumiServiceException@@@{}", optUser);
+    public void testRumiServiceException(RumiUserDTO rumiUser) {
+        log.info("RumiTestBizService.testRumiServiceException@@@{}", rumiUser);
         throw new RumiServiceException("test_error", "测试错误");
     }
 
-    public boolean testNullPointerException(OptUserDTO optUser) {
-        log.info("RumiTestBizService.testNullPointerException@@@{}", optUser);
+    public boolean testNullPointerException(RumiUserDTO rumiUser) {
+        log.info("RumiTestBizService.testNullPointerException@@@{}", rumiUser);
         throw new NullPointerException();
     }
 }

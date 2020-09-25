@@ -1,6 +1,6 @@
 package cn.edu.njupt.rumi.start;
 
-import cn.edu.njupt.rumi.base.dto.OptUserDTO;
+import cn.edu.njupt.rumi.base.dto.RumiUserDTO;
 import cn.edu.njupt.rumi.base.error.BaseException;
 import cn.edu.njupt.rumi.base.rpc.Result;
 import cn.edu.njupt.rumi.client.service.RumiTestService;
@@ -25,11 +25,11 @@ public class RumiTestServiceTest {
 
     @Test
     public void test() throws BaseException {
-        OptUserDTO optUserDTO = new OptUserDTO();
-        Result<Void> result1 = rumiTestService.testBaseException(optUserDTO);
+        RumiUserDTO rumiUserDTO = new RumiUserDTO();
+        Result<Void> result1 = rumiTestService.testBaseException(rumiUserDTO);
         log.info(result1.toString());
 
-        Result<Boolean> result2 = rumiTestService.testNullPointerException(optUserDTO);
+        Result<Boolean> result2 = rumiTestService.testNullPointerException(rumiUserDTO);
         log.info(result2.toString());
     }
 }
