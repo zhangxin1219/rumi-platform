@@ -1,5 +1,7 @@
 package cn.edu.njupt.rumi.base.constant;
 
+import cn.edu.njupt.rumi.base.nacos.NacosConfig;
+
 /**
  * 基础的常量类
  *
@@ -22,4 +24,9 @@ public class RumiConstants {
      * 项目缓存前缀
      */
     public static final String PROJECT_CACHE_PREFIX = "rumi_cache";
+
+    /**
+     * rumi-platform的作者
+     */
+    public static final String AUTHOR_NAME = NacosConfig.getAuthorName();
 }
