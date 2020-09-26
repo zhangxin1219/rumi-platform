@@ -16,6 +16,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
+
+        <!-- 暂时nacos-spring-boot的starter，未来将升级至spring-cloud-nacos的starter -->
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>nacos-config-spring-boot-starter</artifactId>
+            <version>0.2.3</version>
+        </dependency>
+
     </dependencies>
 
 
